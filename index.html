@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumpleaños de 15 de Ana</title>
+    <meta name="description" content="Te invitamos a celebrar los 15 años de Uma.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://ext.same-assets.com/3413252998/1774185898.svg" type="image/svg+xml">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================
+         MENÚ DE NAVEGACIÓN
+    ============================================= -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-brand">Ana XV</div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#evento">Evento</a></li>
+            <li><a href="#vestimenta">Vestimenta</a></li>
+            <li><a href="#regalo">Regalo</a></li>
+            <li><a href="#confirmar">Confirmar</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+         SECCIÓN HERO - INICIO (Nuevo diseño)
+    ============================================= -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            
+
+            <!-- Nombre -->
+            <h1 class="hero-name fade-blur delay-1">ANA</h1>
+
+            <!-- MIS XV AÑOS -->
+            <div class="hero-xv-container fade-blur delay-2">
+                <p class="hero-mis">MIS</p>
+                <p class="hero-xv">XV</p>
+                <p class="hero-anos">AÑOS</p>
+            </div>
+
+            <!-- Dale play -->
+            <p class="hero-play-text fade-blur delay-3">Dale play</p>
+
+            <!-- Reproductor de Música en Hero -->
+            <div class="music-player hero-player fade-blur delay-4">
+                <div class="player-controls">
+                    <button class="player-btn" id="prevBtn" aria-label="Anterior">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="19,20 9,12 19,4"></polygon>
+                            <rect x="5" y="4" width="3" height="16"></rect>
+                        </svg>
+                    </button>
+                    <button class="player-btn play-btn" id="playBtn" aria-label="Reproducir">
+                        <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5,3 19,12 5,21"></polygon>
+                        </svg>
+                        <svg class="pause-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                    </button>
+                    <button class="player-btn" id="nextBtn" aria-label="Siguiente">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5,4 15,12 5,20"></polygon>
+                            <rect x="16" y="4" width="3" height="16"></rect>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Barra de progreso -->
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-dot" id="progressDot"></div>
+                </div>
+            </div>
+            <audio id="audioPlayer" src="https://ext.same-assets.com/3413252998/2911728840.mpga"></audio>
+
+            
+
+           
+        </div>
+    </section>
+
+    <!-- ============================================
+         MENSAJE DE INVITACIÓN
+    ============================================= -->
+    <section class="invitation-message">
+        <div class="message-decoration">
+            <span class="line"></span>
+            <span class="diamond"></span>
+            <span class="line"></span>
+        </div>
+        <p class="message-text">
+            Quiero celebrar contigo este día tan especial en mi vida
+        </p>
+        <p class="message-text">
+            Será un honor compartir este momento único contigo y crear recuerdos inolvidables.
+        </p>
+        <p class="message-highlight">Te espero para celebrar juntos</p>
+        <div class="message-decoration">
+            <span class="line"></span>
+            <span class="diamond"></span>
+            <span class="line"></span>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GALERÍA DE FOTOS
+    ============================================= -->
+    <section class="gallery-section">
+        <div class="gallery-carousel" id="galleryCarousel">
+            <div class="gallery-track" id="galleryTrack">
+                <div class="gallery-slide">
+                    <img src="" alt="Foto de Ana 1" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="" alt="Foto de Ana 2" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="" alt="Foto de Ana 3" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="" alt="Foto de Ana 4" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="" alt="Foto de Ana 5" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="gallery-dots" id="galleryDots"></div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN CUENTA REGRESIVA
+    ============================================= -->
+    <section class="countdown-section">
+        <h2 class="section-title-countdown">Faltan</h2>
+        <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+        <p class="countdown-day">Sabado</p>
+        <p class="countdown-date">21 de Mayo, 2026 · 21:00 hs</p>
+    </section>
+
+    
+
+    
+
+    <!-- ============================================
+         DETALLES DEL EVENTO
+    ============================================= -->
+    <section id="evento" class="event-details">
+        <h2 class="section-title">Detalles del Evento</h2>
+        <div class="section-divider"></div>
+
+        <div class="event-cards">
+            <!-- Fecha -->
+            <div class="event-card">
+                <div class="event-icon">
+                    <img src="https://ext.same-assets.com/3413252998/529806833.svg" alt="Calendario">
+                </div>
+                <h3>Fecha</h3>
+                <p>Sábado 21 de Mayo de 2026</p>
+            </div>
+
+            <!-- Hora -->
+            <div class="event-card">
+                <div class="event-icon">
+                    <img src="https://ext.same-assets.com/3413252998/293718506.svg" alt="Reloj">
+                </div>
+                <h3>Hora</h3>
+                <p>21:00 horas</p>
+            </div>
+
+            <!-- Lugar -->
+            <div class="event-card">
+                <div class="event-icon">
+                    <img src="https://ext.same-assets.com/3413252998/351250390.svg" alt="Ubicación">
+                </div>
+                <h3>Lugar</h3>
+                <p>Salon Shi-Ryu</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CÓMO LLEGAR
+    ============================================= -->
+    <section class="location-section">
+        <h2 class="section-title light">Cómo Llegar</h2>
+        <div class="section-divider light"></div>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2609.6239278126604!2d-68.89770328!3d-32.85874566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1b1edd5a47616d3%3A0xa1b5052dbfcd4979!2sShi-Ryu!5e1!3m2!1sen!2sar!4v1775581126945!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <a href="https://maps.google.com/?q=Quinta+La+Bancaria" target="_blank" rel="noopener" class="maps-btn">
+            <img src="https://ext.same-assets.com/3413252998/2834663490.svg" alt="Maps">
+            Ver en Google Maps
+        </a>
+    </section>
+
+    <!-- ============================================
+         DRESS CODE - VESTIMENTA
+    ============================================= -->
+    <section id="vestimenta" class="dresscode-section">
+        <div class="dresscode-icon">
+            <img src="https://ext.same-assets.com/3413252998/277151415.svg" alt="Dress Code">
+        </div>
+        <h2 class="section-title">Dress Code</h2>
+        <div class="section-divider"></div>
+
+        <div class="dresscode-card">
+            <h3>Formal</h3>
+            <p>Te esperamos con tu mejor outfit para acompañarme en esta noche especial</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEGUNDA GALERÍA (fotos adicionales)
+    ============================================= -->
+    <!--<section class="gallery-section dark">
+        <div class="gallery-carousel" id="galleryCarousel2">
+            <div class="gallery-track" id="galleryTrack2">
+                <div class="gallery-slide">
+                    <img src="https://ext.same-assets.com/3413252998/1773487417.webp" alt="Foto adicional 1" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://ext.same-assets.com/3413252998/461448206.webp" alt="Foto adicional 2" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://ext.same-assets.com/3413252998/1097118620.webp" alt="Foto adicional 3" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://ext.same-assets.com/3413252998/2590261027.webp" alt="Foto adicional 4" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://ext.same-assets.com/3413252998/1603091905.webp" alt="Foto adicional 5" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="gallery-dots" id="galleryDots2"></div>
+    </section>
+-->
+    <!-- ============================================
+         SECCIÓN REGALO
+    ============================================= -->
+    <section id="regalo" class="gift-section">
+        <div class="gift-icon">
+            <img src="https://ext.same-assets.com/3413252998/2017526993.svg" alt="Regalo">
+        </div>
+        <h2 class="section-title">Regalo</h2>
+
+        <p class="gift-description">
+            Tu presencia es el mejor regalo! Pero si deseas podes ayudarme a cumplir mis sueños
+        </p>
+
+        <!-- Datos Bancarios -->
+        <div class="bank-info">
+            <div class="bank-item">
+                <div class="bank-details">
+                    <span class="bank-label">Alias</span>
+                    <span class="bank-value" id="aliasValue">anaromagnoli.mp</span>
+                </div>
+                <button class="copy-btn" data-copy="anaromagnoli.mp" aria-label="Copiar alias">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+            </div>
+            <!--<div class="bank-item">
+                <div class="bank-details">
+                    <span class="bank-label">CVU / CBU</span>
+                    <span class="bank-value" id="cvuValue">0000003100001360197098</span>
+                </div>
+                <button class="copy-btn" data-copy="0000003100001360197098" aria-label="Copiar CVU">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+            </div> -->
+        </div>
+
+        <p class="gift-thanks">¡Gracias por ser parte de esta celebración!</p>
+    </section>
+
+    <!-- ============================================
+         SECCION PARA MANDAR FOTOS
+    ============================================= -->
+
+    <section class="invitation-message">
+        <div class="message-decoration">
+            <span class="line"></span>
+            <span class="diamond"></span>
+            <span class="line"></span>
+        </div>
+        <p class="message-text">
+            Usa este link para compartir las fotos de esta noche unica!
+        </p>
+       
+        <div class="message-decoration">
+            <span class="line"></span>
+            <span class="diamond"></span>
+            <span class="line"></span>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONFIRMAR ASISTENCIA
+    ============================================= -->
+    <section id="confirmar" class="rsvp-section">
+        <h2 class="section-title light">Confirmar Asistencia</h2>
+        <div class="section-divider light"></div>
+        <p class="rsvp-subtitle">Por favor completá el formulario para confirmar tu asistencia</p>
+
+        <form id="rsvpForm" class="rsvp-form" action="https://formspree.io/f/maqlvgwq" method="POST">
+
+    <input type="hidden" name="_subject" value="Nueva confirmación de asistencia - 15 años de Ana">
+
+    <!-- Email (MUY IMPORTANTE para Formspree) -->
+    <div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="email" required>
+    </div>
+
+    <!-- Cantidad de invitados -->
+    <div class="form-group">
+        <label>Cantidad de invitados *</label>
+        <input type="number" name="guestCount" min="1" max="10" value="1" required>
+    </div>
+
+    <!-- Datos -->
+    <div class="form-group">
+        <label>Nombre *</label>
+        <input type="text" name="firstName" required>
+    </div>
+
+    <div class="form-group">
+        <label>Apellido *</label>
+        <input type="text" name="lastName" required>
+    </div>
+
+   
+
+    <!-- Mensaje -->
+    <div class="form-group">
+        <label>Requerimiento alimenticio</label>
+        <textarea name="message" rows="4"></textarea>
+    </div>
+    <!-- Canción -->
+        <div class="form-group">
+    <label>Playlist de la fiesta 🎶</label>
+    <p style="opacity: 0.8; font-size: 0.9rem;">
+        Sumá las canciones que te gustaría escuchar
+    </p>
+
+    <a href="https://open.spotify.com/playlist/1vEF0YqscI0dlBoPv1Lu4X?si=YHz2rm7kTBWIYCEUspyp2g&pt=e014a68c61a1800a003f37cecf8842de&pi=qNi3NxJtT_K0T" target="_blank" class="spotify-btn">
+        🎧 Agregar canciones en Spotify
+    </a>
+    
+</div>
+    <button type="submit" class="submit-btn">
+        Confirmar Asistencia
+    </button>
+
+    <div class="form-group">
+  <label>Agendá la fecha 📅</label>
+
+  <a 
+    href="https://www.google.com/calendar/render?action=TEMPLATE&text=XV%20de%20Ana&dates=20260521T210000/20260524T050000&details=Te%20invito%20a%20mis%2015%20años&location=Mendoza"
+    target="_blank"
+    class="calendar-btn"
+  >
+    📅 Agregar a Google Calendar
+  </a>
+</div>
+
+</form>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+    <footer class="footer">
+        <p>Con amor, Ana</p>
+    </footer>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+<script>
+window.addEventListener("load", () => {
+  const elements = document.querySelectorAll(".fade-blur");
+  
+  elements.forEach(el => {
+    el.classList.add("show");
+  });
+});
+</script>
+</html>
