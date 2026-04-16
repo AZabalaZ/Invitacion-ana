@@ -6,6 +6,7 @@
 /* ============================================
    VARIABLES CSS - Fácil de editar
    ============================================ */
+   /* Fuentes */
 :root {
     /* Colores principales - Tema verde sage */
     --color-bg-dark: #5a7a6a;
@@ -105,8 +106,9 @@ input, textarea {
 }
 
 .navbar.scrolled {
-    background: rgba(60, 90, 70, 0.95);
+    background: rgba(60, 90, 70, 0.3);
     backdrop-filter: blur(10px);
+
 }
 
 .nav-brand {
@@ -218,7 +220,7 @@ input, textarea {
 /* Nombre grande */
 .hero-name {
     font-family: var(--font-title);
-    font-size: clamp(3.5rem, 15vw, 6rem);
+    font-size: clamp(7.5rem, 15vw, 6rem);
     font-weight: 400;
     letter-spacing: 12px;
     margin-bottom: var(--spacing-sm);
@@ -232,9 +234,9 @@ input, textarea {
 }
 
 .hero-mis {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 400;
+    font-family: var(--font-title); /* body */
+    font-size: 1.2rem;
+    font-weight: 600;
     letter-spacing: 6px;
     text-transform: uppercase;
     margin-bottom: -5px;
@@ -253,9 +255,9 @@ input, textarea {
 }
 
 .hero-anos {
-    font-family: var(--font-body);
+    font-family: var(--font-title); /* body */
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 12px;
     text-transform: uppercase;
     margin-top: -5px;
@@ -552,27 +554,29 @@ input, textarea {
 
 .gallery-carousel {
     overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* podés ajustar */
     margin: 0 auto;
-    max-width: 500px;
-    padding: 0 var(--spacing-md);
 }
 
 .gallery-track {
     display: flex;
-    transition: transform var(--transition-slow);
+    width: 100%;
+    transition: transform 0.5s ease;
 }
 
 .gallery-slide {
+    flex: 0 0 100%;
     min-width: 100%;
-    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-slide img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 70vh;
+    width: auto;
     border-radius: var(--border-radius-md);
-    background: rgba(255, 255, 255, 0.1);
 }
 
 .gallery-dots {
@@ -706,9 +710,9 @@ input, textarea {
 .event-cards {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: 100px;
     max-width: 400px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .event-card {
@@ -1024,21 +1028,72 @@ input, textarea {
     font-style: italic;
 }
 
-.spotify-btn {
+/* CONTENEDOR GENERAL (igual que tus cards) */
+.extra-section {
+    max-width: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-md);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+/* TITULO */
+.extra-section h3 {
+    font-family: var(--font-title);
+    font-weight: 75;
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-light);
+}
+
+/* DESCRIPCION */
+.extra-section p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* BOTONES GENERALES */
+.extra-btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 12px 20px;
+    padding: 12px 22px;
     border-radius: 30px;
-    background: #187037;
-    color: white;
     font-weight: 600;
-    transition: 0.3s;
+    transition: var(--transition-normal);
+    text-decoration: none;
+}
+
+/* SPOTIFY */
+.spotify-btn {
+    background: rgba(29, 185, 84, 0.15);
+    border: 1px solid rgba(29, 185, 84, 0.5);
+    color: #1DB954;
 }
 
 .spotify-btn:hover {
-    background: #1ed760;
+    background: #1DB954;
+    color: #fff;
     transform: translateY(-2px);
 }
+
+/* CALENDARIO */
+.calendar-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-text-light);
+}
+
+.calendar-btn:hover {
+    background: #ffffff;
+    color: var(--color-bg-dark);
+    transform: translateY(-2px);
+}
+
+/* EMBED SPOTIFY */
 
 /* ============================================
    TOAST NOTIFICATION
@@ -1085,6 +1140,25 @@ input, textarea {
 .delay-3 { transition-delay: 0.6s; }
 .delay-4 { transition-delay: 0.8s; }
 .delay-5 { transition-delay: 1s; }
+
+
+.drive-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-text-light);
+}
+
+.drive-btn:hover {
+    background: #ffffff;
+    color: var(--color-bg-dark);
+    transform: translateY(-2px);
+}
+
+.extra-section {
+    max-width: 400px;
+    margin: var(--spacing-md) auto; /* 👈 centra y da aire */
+    text-align: center;
+}
 /* ============================================
    RESPONSIVE - Tabletas y Desktop
    ============================================ */
@@ -1126,7 +1200,8 @@ input, textarea {
     }
 
     .gallery-slide img {
-        height: 400px;
+                height: 80vh;
+
     }
 }
 

@@ -115,6 +115,10 @@ function initMusicPlayer() {
 
     let isPlaying = false;
 
+    audio.addEventListener('loadedmetadata', () => {
+        audio.currentTime = 5;
+        
+    });
     // Play/Pause
     playBtn.addEventListener('click', () => {
         if (isPlaying) {
@@ -131,6 +135,7 @@ function initMusicPlayer() {
         }
         isPlaying = !isPlaying;
     });
+
 
     // Actualizar barra de progreso
     audio.addEventListener('timeupdate', () => {
