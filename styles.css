@@ -1218,3 +1218,10 @@ input, textarea {
         max-width: 600px;
     }
 }
+
+@media (max-width: 480px) {
+    .countdown-label {
+        font-size: 0.65rem;
+        letter-spacing: 0;
+    }
+}
