@@ -14,7 +14,7 @@
     --color-text-light: #ffffff;
     --color-text-dark: #3d5a4a;
     --color-text-muted: #6b8b7a;
-    --color-accent: #4a6a5a;
+    --color-accent: #054123;
 
     /* Fuentes */
     --font-title: 'Playfair Display', Georgia, serif;
@@ -645,6 +645,7 @@ input, textarea {
     font-family: var(--font-title);
     font-style: italic;
     font-size: 1.3rem;
+    font-weight: 450;
     color: var(--color-accent);
     margin: var(--spacing-md) 0;
 }
